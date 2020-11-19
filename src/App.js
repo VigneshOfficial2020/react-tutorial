@@ -1,13 +1,15 @@
-import React from 'react';
-
+import React from "react";
+import "./App.css";
+import CakeContainer from "./components/CakeContainer";
+import {Provider } from 'react-redux'
+import store from './redux/store'
 function App() {
-  const h1 = <h1>Hello world</h1>;
-  const f1 = <h1>BRANCH f1</h1>;
   return (
-    <div className="vicky">
-     {h1}
-     {f1}
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <CakeContainer />
+      </div>
+    </Provider>
   );
 }
 
